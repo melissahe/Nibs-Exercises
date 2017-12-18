@@ -51,7 +51,7 @@ extension FavoriteProjectsViewController: UICollectionViewDelegateFlowLayout {
 
 extension FavoriteProjectsViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return 1 //to do
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

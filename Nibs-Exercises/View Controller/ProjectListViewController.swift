@@ -12,13 +12,12 @@ class ProjectListViewController: UIViewController {
 
     @IBOutlet weak var projectCollectionView: UICollectionView!
     @IBOutlet weak var searchBar: UISearchBar!
-    
-    //to do
-//    var projects: [Project] = [] {
-//        didSet {
-//            projectCollectionView.reloadData()
-//        }
-//    }
+
+    var projects: [Project] = [] {
+        didSet {
+            projectCollectionView.reloadData()
+        }
+    }
     
     var cellSpacing: CGFloat = UIScreen.main.bounds.width * CGFloat(0.05)
     
@@ -32,7 +31,14 @@ class ProjectListViewController: UIViewController {
         
         projectCollectionView.delegate = self
         projectCollectionView.dataSource = self
+        searchBar.delegate = self
         
+    }
+    
+    func loadProjects(searchTerm: String) {
+        ProjectAPIClient.manager.getProjects(from: searchTerm, completionHandler: { (onlineProjects) in
+            self.projects = onlineProjects
+        }, errorHandler: {print($0)})
     }
 
 }
@@ -46,7 +52,7 @@ extension ProjectListViewController: UICollectionViewDelegateFlowLayout {
         return CGSize(width: width, height: height)
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return cellSpacing
     }
     
@@ -57,15 +63,33 @@ extension ProjectListViewController: UICollectionViewDelegateFlowLayout {
 
 extension ProjectListViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1 // to do
+        return projects.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "projectCell", for: indexPath)
+        let currentProject = projects[indexPath.row]
         
-        //to do
+        guard let projectCell = cell as? ProjectCollectionViewCell else {
+            return cell
+        }
         
-        return cell
+        projectCell.projectImageView.image = nil
+        
+        projectCell.configureViews(from: currentProject)
+        
+        return projectCell
+    }
+}
+
+extension ProjectListViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        guard let searchText = searchBar.text, let formattedText = searchText.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) else {
+            print("bad search: \(String(describing: searchBar.text))")
+            return
+        }
+        
+        loadProjects(searchTerm: formattedText)
     }
 }
 

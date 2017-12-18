@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		81693A041FE86C350004BFB6 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81693A031FE86C350004BFB6 /* Project.swift */; };
+		81693A071FE86DA70004BFB6 /* ProjectAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81693A061FE86DA70004BFB6 /* ProjectAPIClient.swift */; };
+		81693A091FE86DB30004BFB6 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81693A081FE86DB30004BFB6 /* NetworkHelper.swift */; };
+		81693A0B1FE877120004BFB6 /* ImageAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81693A0A1FE877120004BFB6 /* ImageAPIClient.swift */; };
+		81693A0D1FE87AEC0004BFB6 /* ProjectDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81693A0C1FE87AEC0004BFB6 /* ProjectDetailViewController.swift */; };
 		81D11D9A1FE8537200B1AB23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D11D991FE8537200B1AB23 /* AppDelegate.swift */; };
 		81D11D9C1FE8537200B1AB23 /* ProjectListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D11D9B1FE8537200B1AB23 /* ProjectListViewController.swift */; };
 		81D11D9F1FE8537200B1AB23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81D11D9D1FE8537200B1AB23 /* Main.storyboard */; };
@@ -18,6 +23,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		81693A031FE86C350004BFB6 /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
+		81693A061FE86DA70004BFB6 /* ProjectAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectAPIClient.swift; sourceTree = "<group>"; };
+		81693A081FE86DB30004BFB6 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
+		81693A0A1FE877120004BFB6 /* ImageAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAPIClient.swift; sourceTree = "<group>"; };
+		81693A0C1FE87AEC0004BFB6 /* ProjectDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailViewController.swift; sourceTree = "<group>"; };
 		81D11D961FE8537200B1AB23 /* Nibs-Exercises.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nibs-Exercises.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81D11D991FE8537200B1AB23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81D11D9B1FE8537200B1AB23 /* ProjectListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectListViewController.swift; sourceTree = "<group>"; };
@@ -41,6 +51,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		81693A051FE86C390004BFB6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				81693A031FE86C350004BFB6 /* Project.swift */,
+				81693A061FE86DA70004BFB6 /* ProjectAPIClient.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		81D11D8D1FE8537200B1AB23 = {
 			isa = PBXGroup;
 			children = (
@@ -60,7 +79,10 @@
 		81D11D981FE8537200B1AB23 /* Nibs-Exercises */ = {
 			isa = PBXGroup;
 			children = (
+				81693A081FE86DB30004BFB6 /* NetworkHelper.swift */,
+				81693A0A1FE877120004BFB6 /* ImageAPIClient.swift */,
 				81D11DAC1FE853B700B1AB23 /* Unused Stuff */,
+				81693A051FE86C390004BFB6 /* Model */,
 				81D11DB11FE8554D00B1AB23 /* Views */,
 				81D11DAB1FE853AD00B1AB23 /* View Controller */,
 				81D11D9D1FE8537200B1AB23 /* Main.storyboard */,
@@ -74,6 +96,7 @@
 			children = (
 				81D11D9B1FE8537200B1AB23 /* ProjectListViewController.swift */,
 				81D11DB21FE862E300B1AB23 /* FavoriteProjectsViewController.swift */,
+				81693A0C1FE87AEC0004BFB6 /* ProjectDetailViewController.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -170,9 +193,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81693A091FE86DB30004BFB6 /* NetworkHelper.swift in Sources */,
 				81D11DB31FE862E400B1AB23 /* FavoriteProjectsViewController.swift in Sources */,
 				81D11D9C1FE8537200B1AB23 /* ProjectListViewController.swift in Sources */,
+				81693A0B1FE877120004BFB6 /* ImageAPIClient.swift in Sources */,
 				81D11D9A1FE8537200B1AB23 /* AppDelegate.swift in Sources */,
+				81693A071FE86DA70004BFB6 /* ProjectAPIClient.swift in Sources */,
+				81693A041FE86C350004BFB6 /* Project.swift in Sources */,
+				81693A0D1FE87AEC0004BFB6 /* ProjectDetailViewController.swift in Sources */,
 				81D11DAF1FE8554700B1AB23 /* ProjectCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

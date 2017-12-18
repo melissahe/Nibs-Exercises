@@ -18,8 +18,13 @@ class ProjectCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
     }
     
-    func configureViews() {
-        //to do
+    func configureViews(from project: Project) {
+        self.titleLabel.text = project.name
+        self.fieldsLabel.text = project.fields.joined(separator: ", ")
+        ImageAPIClient.manager.getImage(from: project.imageLinks.thumbnail, completionHandler: { (onlineImage) in
+            self.projectImageView.image = onlineImage
+            self.projectImageView.setNeedsLayout()
+        }, errorHandler: {print($0)})
     }
 
 }
