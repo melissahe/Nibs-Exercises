@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		81D11D9A1FE8537200B1AB23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D11D991FE8537200B1AB23 /* AppDelegate.swift */; };
-		81D11D9C1FE8537200B1AB23 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D11D9B1FE8537200B1AB23 /* ViewController.swift */; };
+		81D11D9C1FE8537200B1AB23 /* ProjectListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D11D9B1FE8537200B1AB23 /* ProjectListViewController.swift */; };
 		81D11D9F1FE8537200B1AB23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81D11D9D1FE8537200B1AB23 /* Main.storyboard */; };
 		81D11DA11FE8537200B1AB23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81D11DA01FE8537200B1AB23 /* Assets.xcassets */; };
 		81D11DA41FE8537200B1AB23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81D11DA21FE8537200B1AB23 /* LaunchScreen.storyboard */; };
+		81D11DAF1FE8554700B1AB23 /* ProjectCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D11DAD1FE8554700B1AB23 /* ProjectCollectionViewCell.swift */; };
+		81D11DB01FE8554700B1AB23 /* ProjectCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81D11DAE1FE8554700B1AB23 /* ProjectCollectionViewCell.xib */; };
+		81D11DB31FE862E400B1AB23 /* FavoriteProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D11DB21FE862E300B1AB23 /* FavoriteProjectsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		81D11D961FE8537200B1AB23 /* Nibs-Exercises.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nibs-Exercises.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81D11D991FE8537200B1AB23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		81D11D9B1FE8537200B1AB23 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		81D11D9B1FE8537200B1AB23 /* ProjectListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectListViewController.swift; sourceTree = "<group>"; };
 		81D11D9E1FE8537200B1AB23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		81D11DA01FE8537200B1AB23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		81D11DA31FE8537200B1AB23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		81D11DA51FE8537200B1AB23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		81D11DAD1FE8554700B1AB23 /* ProjectCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCollectionViewCell.swift; sourceTree = "<group>"; };
+		81D11DAE1FE8554700B1AB23 /* ProjectCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProjectCollectionViewCell.xib; sourceTree = "<group>"; };
+		81D11DB21FE862E300B1AB23 /* FavoriteProjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteProjectsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +60,41 @@
 		81D11D981FE8537200B1AB23 /* Nibs-Exercises */ = {
 			isa = PBXGroup;
 			children = (
-				81D11D991FE8537200B1AB23 /* AppDelegate.swift */,
-				81D11D9B1FE8537200B1AB23 /* ViewController.swift */,
+				81D11DAC1FE853B700B1AB23 /* Unused Stuff */,
+				81D11DB11FE8554D00B1AB23 /* Views */,
+				81D11DAB1FE853AD00B1AB23 /* View Controller */,
 				81D11D9D1FE8537200B1AB23 /* Main.storyboard */,
-				81D11DA01FE8537200B1AB23 /* Assets.xcassets */,
-				81D11DA21FE8537200B1AB23 /* LaunchScreen.storyboard */,
 				81D11DA51FE8537200B1AB23 /* Info.plist */,
 			);
 			path = "Nibs-Exercises";
+			sourceTree = "<group>";
+		};
+		81D11DAB1FE853AD00B1AB23 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				81D11D9B1FE8537200B1AB23 /* ProjectListViewController.swift */,
+				81D11DB21FE862E300B1AB23 /* FavoriteProjectsViewController.swift */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		81D11DAC1FE853B700B1AB23 /* Unused Stuff */ = {
+			isa = PBXGroup;
+			children = (
+				81D11DA01FE8537200B1AB23 /* Assets.xcassets */,
+				81D11DA21FE8537200B1AB23 /* LaunchScreen.storyboard */,
+				81D11D991FE8537200B1AB23 /* AppDelegate.swift */,
+			);
+			path = "Unused Stuff";
+			sourceTree = "<group>";
+		};
+		81D11DB11FE8554D00B1AB23 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				81D11DAE1FE8554700B1AB23 /* ProjectCollectionViewCell.xib */,
+				81D11DAD1FE8554700B1AB23 /* ProjectCollectionViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,6 +156,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81D11DB01FE8554700B1AB23 /* ProjectCollectionViewCell.xib in Resources */,
 				81D11DA41FE8537200B1AB23 /* LaunchScreen.storyboard in Resources */,
 				81D11DA11FE8537200B1AB23 /* Assets.xcassets in Resources */,
 				81D11D9F1FE8537200B1AB23 /* Main.storyboard in Resources */,
@@ -136,8 +170,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81D11D9C1FE8537200B1AB23 /* ViewController.swift in Sources */,
+				81D11DB31FE862E400B1AB23 /* FavoriteProjectsViewController.swift in Sources */,
+				81D11D9C1FE8537200B1AB23 /* ProjectListViewController.swift in Sources */,
 				81D11D9A1FE8537200B1AB23 /* AppDelegate.swift in Sources */,
+				81D11DAF1FE8554700B1AB23 /* ProjectCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
