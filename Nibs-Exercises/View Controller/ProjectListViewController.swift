@@ -41,6 +41,16 @@ class ProjectListViewController: UIViewController {
         }, errorHandler: {print($0)})
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if
+            let cell = sender as? ProjectCollectionViewCell,
+            let indexPath = projectCollectionView.indexPath(for: cell),
+            let destinationVC = segue.destination as? ProjectDetailViewController {
+            destinationVC.project = projects[indexPath.row]
+            destinationVC.image = cell.projectImageView.image
+        }
+    }
+    
 }
 
 extension ProjectListViewController: UICollectionViewDelegateFlowLayout {
@@ -58,6 +68,12 @@ extension ProjectListViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: cellSpacing, left: cellSpacing, bottom: cellSpacing, right: cellSpacing)
+    }
+}
+
+extension ProjectListViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "detailedSegue", sender: collectionView.cellForItem(at: indexPath))
     }
 }
 

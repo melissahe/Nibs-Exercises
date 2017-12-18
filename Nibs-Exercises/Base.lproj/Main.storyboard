@@ -38,9 +38,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </view>
-                                        <connections>
-                                            <segue destination="CbP-QP-ezL" kind="show" identifier="detailedSegue" id="dHf-Iy-R4h"/>
-                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -61,6 +58,7 @@
                     <connections>
                         <outlet property="projectCollectionView" destination="m8M-Z3-Y5H" id="7Lk-h3-F9d"/>
                         <outlet property="searchBar" destination="npI-Qz-s24" id="yLm-Wl-D8B"/>
+                        <segue destination="CbP-QP-ezL" kind="show" identifier="detailedSegue" id="LOp-bB-2kJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -75,7 +73,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lUB-0E-ogu">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lUB-0E-ogu">
                                 <rect key="frame" x="0.0" y="64" width="375" height="411"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="titleLabel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BV8-QS-XDR">
@@ -99,17 +97,17 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="BV8-QS-XDR" firstAttribute="top" secondItem="lUB-0E-ogu" secondAttribute="bottom" constant="20" id="0Zi-4r-iGt"/>
+                            <constraint firstItem="lUB-0E-ogu" firstAttribute="trailing" secondItem="fnB-kY-ufh" secondAttribute="trailing" id="4u1-qa-2yF"/>
+                            <constraint firstItem="lUB-0E-ogu" firstAttribute="top" secondItem="fnB-kY-ufh" secondAttribute="top" id="7Oy-u5-JcT"/>
+                            <constraint firstItem="lUB-0E-ogu" firstAttribute="leading" secondItem="fnB-kY-ufh" secondAttribute="leading" id="7t1-Ha-tnB"/>
                             <constraint firstItem="hKo-bl-vKE" firstAttribute="top" secondItem="vCU-Uh-0Fv" secondAttribute="bottom" constant="20" id="BIR-Cc-rRm"/>
-                            <constraint firstItem="fnB-kY-ufh" firstAttribute="trailing" secondItem="lUB-0E-ogu" secondAttribute="trailing" id="BJ7-x9-qRb"/>
                             <constraint firstItem="fnB-kY-ufh" firstAttribute="trailing" secondItem="hKo-bl-vKE" secondAttribute="trailing" constant="20" id="Eir-0k-xsu"/>
                             <constraint firstItem="fnB-kY-ufh" firstAttribute="bottom" secondItem="hKo-bl-vKE" secondAttribute="bottom" constant="20" id="GOq-rg-29g"/>
                             <constraint firstItem="hKo-bl-vKE" firstAttribute="leading" secondItem="fnB-kY-ufh" secondAttribute="leading" constant="20" id="HLH-mW-yyd"/>
                             <constraint firstItem="vCU-Uh-0Fv" firstAttribute="top" secondItem="BV8-QS-XDR" secondAttribute="bottom" constant="20" id="P4Y-0c-tfx"/>
-                            <constraint firstItem="lUB-0E-ogu" firstAttribute="top" secondItem="fnB-kY-ufh" secondAttribute="top" id="Ut0-eF-Tdc"/>
                             <constraint firstItem="vCU-Uh-0Fv" firstAttribute="leading" secondItem="fnB-kY-ufh" secondAttribute="leading" constant="20" id="aPd-cU-59I"/>
-                            <constraint firstItem="lUB-0E-ogu" firstAttribute="leading" secondItem="fnB-kY-ufh" secondAttribute="leading" id="qF2-aw-tbE"/>
                             <constraint firstItem="fnB-kY-ufh" firstAttribute="trailing" secondItem="BV8-QS-XDR" secondAttribute="trailing" constant="20" id="u6b-kd-RnN"/>
+                            <constraint firstItem="BV8-QS-XDR" firstAttribute="top" secondItem="lUB-0E-ogu" secondAttribute="bottom" constant="20" id="vbV-Gp-zOv"/>
                             <constraint firstItem="fnB-kY-ufh" firstAttribute="trailing" secondItem="vCU-Uh-0Fv" secondAttribute="trailing" constant="20" id="w2U-rO-QuZ"/>
                             <constraint firstItem="BV8-QS-XDR" firstAttribute="leading" secondItem="fnB-kY-ufh" secondAttribute="leading" constant="20" id="weR-aN-vVF"/>
                         </constraints>
@@ -235,6 +233,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="dHf-Iy-R4h"/>
+        <segue reference="LOp-bB-2kJ"/>
     </inferredMetricsTieBreakers>
 </document>
