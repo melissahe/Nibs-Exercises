@@ -12,6 +12,7 @@
 		81693A091FE86DB30004BFB6 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81693A081FE86DB30004BFB6 /* NetworkHelper.swift */; };
 		81693A0B1FE877120004BFB6 /* ImageAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81693A0A1FE877120004BFB6 /* ImageAPIClient.swift */; };
 		81693A0D1FE87AEC0004BFB6 /* ProjectDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81693A0C1FE87AEC0004BFB6 /* ProjectDetailViewController.swift */; };
+		81693A111FE881E40004BFB6 /* PersistentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81693A101FE881E40004BFB6 /* PersistentData.swift */; };
 		81D11D9A1FE8537200B1AB23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D11D991FE8537200B1AB23 /* AppDelegate.swift */; };
 		81D11D9C1FE8537200B1AB23 /* ProjectListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D11D9B1FE8537200B1AB23 /* ProjectListViewController.swift */; };
 		81D11D9F1FE8537200B1AB23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81D11D9D1FE8537200B1AB23 /* Main.storyboard */; };
@@ -28,6 +29,7 @@
 		81693A081FE86DB30004BFB6 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 		81693A0A1FE877120004BFB6 /* ImageAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAPIClient.swift; sourceTree = "<group>"; };
 		81693A0C1FE87AEC0004BFB6 /* ProjectDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailViewController.swift; sourceTree = "<group>"; };
+		81693A101FE881E40004BFB6 /* PersistentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentData.swift; sourceTree = "<group>"; };
 		81D11D961FE8537200B1AB23 /* Nibs-Exercises.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nibs-Exercises.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81D11D991FE8537200B1AB23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81D11D9B1FE8537200B1AB23 /* ProjectListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectListViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 			children = (
 				81693A081FE86DB30004BFB6 /* NetworkHelper.swift */,
 				81693A0A1FE877120004BFB6 /* ImageAPIClient.swift */,
+				81693A101FE881E40004BFB6 /* PersistentData.swift */,
 				81D11DAC1FE853B700B1AB23 /* Unused Stuff */,
 				81693A051FE86C390004BFB6 /* Model */,
 				81D11DB11FE8554D00B1AB23 /* Views */,
@@ -193,6 +196,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81693A111FE881E40004BFB6 /* PersistentData.swift in Sources */,
 				81693A091FE86DB30004BFB6 /* NetworkHelper.swift in Sources */,
 				81D11DB31FE862E400B1AB23 /* FavoriteProjectsViewController.swift in Sources */,
 				81D11D9C1FE8537200B1AB23 /* ProjectListViewController.swift in Sources */,

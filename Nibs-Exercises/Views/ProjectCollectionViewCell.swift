@@ -21,10 +21,28 @@ class ProjectCollectionViewCell: UICollectionViewCell {
     func configureViews(from project: Project) {
         self.titleLabel.text = project.name
         self.fieldsLabel.text = project.fields.joined(separator: ", ")
-        ImageAPIClient.manager.getImage(from: project.imageLinks.thumbnail, completionHandler: { (onlineImage) in
-            self.projectImageView.image = onlineImage
-            self.projectImageView.setNeedsLayout()
-        }, errorHandler: {print($0)})
+        
+        let favoriteProjects = PersistentData.manager.getProjects()
+        
+        if favoriteProjects.contains(project) {
+            let imageFilePath = PersistentData.manager.dataFilePath(filePathName: project.id.description)
+            
+            do {
+                let data = try Data.init(contentsOf: imageFilePath)
+                guard let image = UIImage(data: data) else {
+                    print("error getting image from data")
+                    return
+                }
+                projectImageView.image = image
+            } catch let error {
+                print("image initialization error: \(error)")
+            }
+        } else {
+            ImageAPIClient.manager.getImage(from: project.imageLinks.thumbnail, completionHandler: { (onlineImage) in
+                self.projectImageView.image = onlineImage
+                self.projectImageView.setNeedsLayout()
+            }, errorHandler: {print($0)})
+        }
     }
 
 }

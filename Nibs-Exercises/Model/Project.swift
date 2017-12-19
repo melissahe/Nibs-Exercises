@@ -12,15 +12,20 @@ struct ProjectResults: Codable {
     let projects: [Project]
 }
 
-struct Project: Codable {
+struct Project: Codable, Equatable {
+    let id: Int
     let name: String
     let imageLinks: ImageWrapper
     let fields: [String]
     let owners: [OwnerWrapper]
     
     enum CodingKeys: String, CodingKey {
-        case name, fields, owners
+        case id, name, fields, owners
         case imageLinks = "covers"
+    }
+    
+    static func ==(lhs: Project, rhs: Project) -> Bool {
+        return lhs.id == rhs.id
     }
 }
 

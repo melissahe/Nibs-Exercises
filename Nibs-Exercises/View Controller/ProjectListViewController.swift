@@ -15,6 +15,9 @@ class ProjectListViewController: UIViewController {
 
     var projects: [Project] = [] {
         didSet {
+            if projects.isEmpty {
+                return
+            }
             projectCollectionView.reloadData()
         }
     }

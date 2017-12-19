@@ -113,8 +113,17 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fnB-kY-ufh"/>
                     </view>
+                    <navigationItem key="navigationItem" id="C29-Se-kWW">
+                        <barButtonItem key="rightBarButtonItem" image="favorite-unfilled" id="G8D-Wc-S9b">
+                            <color key="tintColor" red="0.67400000000000004" green="0.68575342699999997" blue="0.74088829519999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="favoriteButtonPressed:" destination="CbP-QP-ezL" id="Iv1-bl-CRV"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="authorsLabel" destination="vCU-Uh-0Fv" id="dNL-9F-Hb3"/>
+                        <outlet property="favoriteImageBarButtonItem" destination="G8D-Wc-S9b" id="cjs-AF-80b"/>
                         <outlet property="fieldsLabel" destination="hKo-bl-vKE" id="yHc-BD-5sL"/>
                         <outlet property="projectImageView" destination="lUB-0E-ogu" id="2nw-p3-LVb"/>
                         <outlet property="titleLabel" destination="BV8-QS-XDR" id="Tdt-up-iCn"/>
@@ -122,7 +131,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WS3-Kc-MzJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2392.8000000000002" y="613.94302848575717"/>
+            <point key="canvasLocation" x="2383" y="531"/>
         </scene>
         <!--Favorite Projects-->
         <scene sceneID="tHi-br-xIu">
@@ -150,7 +159,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </view>
                                         <connections>
-                                            <segue destination="CbP-QP-ezL" kind="show" id="DX3-bV-amr"/>
+                                            <segue destination="CbP-QP-ezL" kind="show" identifier="detailedSegue" id="DX3-bV-amr"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -232,6 +241,9 @@
             <point key="canvasLocation" x="224" y="933.73313343328346"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="favorite-unfilled" width="32" height="32"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="LOp-bB-2kJ"/>
     </inferredMetricsTieBreakers>
